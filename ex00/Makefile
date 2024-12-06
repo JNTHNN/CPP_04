@@ -1,4 +1,4 @@
-NAME 		:= #NAME OF PROJECT/EXECUTABLE
+NAME 		:= Animal
 
 CPP 		:= c++
 CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD
@@ -8,7 +8,7 @@ OBJ_DIR		:=	.obj/
 DEP_DIR		:=	.dep/
 INC_DIR		:=	includes/
 
-SRC_FILES	:= main.cpp #ADD FILES INSIDE SOURCES DIRECTORY
+SRC_FILES	:= main.cpp Animal.cpp Cat.cpp Dog.cpp
 
 OBJ_FILES	:=	$(SRC_FILES:.cpp=.o)
 DEP_FILES	:=	$(OBJ_FILES:.o=.d)
@@ -20,11 +20,11 @@ DEP			:=	$(addprefix $(DEP_DIR), $(DEP_FILES))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		@echo CREATING #WHAT YOU WANT#
+		@echo CREATING ANIMAL
 		@$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJ)
 		@sleep 1
 		@tput cuu1 dl1
-		@echo "#WHAT YOU WANT# CREATED  " 
+		@echo "ANIMAL CREATED  " 
 
 
 $(OBJ_DIR)%.o:$(SRC_DIR)%.cpp
@@ -36,13 +36,13 @@ $(OBJ_DIR)%.o:$(SRC_DIR)%.cpp
 
 clean:
 	@$(RM) -fr $(OBJ_DIR) $(DEP_DIR)
-	@echo #WHAT YOU WANT# DESTROYED BYE !
+	@echo ANIMAL DESTROYED BYE !
 	@sleep 1
 	@tput cuu1 dl1
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo #WHAT YOU WANT# DESTROYED BYE !
+	@echo ANIMAL DESTROYED BYE !
 	@sleep 1
 	@tput cuu1 dl1
 

@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 
-class Cat
+class Cat: public Animal
 {
     public:
         Cat();
