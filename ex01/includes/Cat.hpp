@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 09:01:34 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/07 09:58:14 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/07 10:18:06 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,15 @@
 # define CAT_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 #include <iostream>
 #include <string>
 
-class Cat: public Animal
+class	Cat: public Animal
 {
+	private:
+		Brain* _brain;
+		
     public:
         Cat();
         Cat(const std::string &type);
@@ -27,7 +31,7 @@ class Cat: public Animal
         ~Cat();
 
 		void	makeSound() const;
-
+		Brain*	getBrain() const;
 };
 
 #endif

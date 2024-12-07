@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/07 09:01:34 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/07 09:58:14 by jgasparo         ###   ########.fr       */
+/*   Created: 2024/12/07 09:35:42 by jgasparo          #+#    #+#             */
+/*   Updated: 2024/12/07 11:19:58 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-#include "Animal.hpp"
 #include <iostream>
 #include <string>
 
-class Cat: public Animal
+class Brain
 {
-    public:
-        Cat();
-        Cat(const std::string &type);
-        Cat(const Cat &copied);
-        Cat &operator=(const Cat &base);
-        ~Cat();
+	private:
+		std::string	_ideas[100];
+		size_t		_nbIdeas;
 
-		void	makeSound() const;
+	public:
+        Brain();
+        Brain(const Brain &copied);
+        Brain &operator=(const Brain &base);
+        virtual ~Brain();
 
+		const std::string	getIdea(size_t i) const;
+		void				addIdea(const std::string &idea);
+		void				setIdea(size_t i, const std::string idea);
 };
 
 #endif

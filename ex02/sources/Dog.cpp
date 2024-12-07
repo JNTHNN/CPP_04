@@ -6,13 +6,13 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 09:01:47 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/07 10:07:52 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/07 13:02:09 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Dog.hpp"
 
-Dog::Dog(void): Animal()
+Dog::Dog(void): AAnimal()
 {
     std::cout << "Default constructor called from Dog" << std::endl;
     _type = "Dog";
@@ -20,16 +20,18 @@ Dog::Dog(void): Animal()
     return;
 }
 
-Dog::Dog(const std::string &type): Animal(type)
+Dog::Dog(const std::string &type): AAnimal(type)
 {
     std::cout << "Constructor with name assigned called from Dog" << std::endl;
+	_brain = new Brain();
     return;
 }
 
-Dog::Dog(const Dog &copied)
+Dog::Dog(const Dog &copied): AAnimal(copied)
 {
     std::cout << "Copy constructor called from Dog" << std::endl;
-    *this = copied;
+	this->_type = copied._type;
+	this->_brain = new Brain(*(copied._brain));
     return;
 }
 
@@ -49,4 +51,9 @@ Dog::~Dog(void)
 void	Dog::makeSound(void) const
 {
 	std::cout << "Woof Woof" << std::endl;
+}
+
+Brain*	Dog::getBrain(void) const
+{
+	return this->_brain;
 }

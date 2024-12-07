@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 09:01:40 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/07 09:18:06 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/07 09:58:07 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 class	Dog: public Animal
 {
+
 	public:
 		Dog();
 		Dog(const std::string &type);

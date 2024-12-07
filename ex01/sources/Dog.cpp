@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 09:01:47 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/07 10:07:52 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/07 12:48:29 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,15 @@ Dog::Dog(void): Animal()
 Dog::Dog(const std::string &type): Animal(type)
 {
     std::cout << "Constructor with name assigned called from Dog" << std::endl;
+	_brain = new Brain();
     return;
 }
 
-Dog::Dog(const Dog &copied)
+Dog::Dog(const Dog &copied): Animal(copied)
 {
     std::cout << "Copy constructor called from Dog" << std::endl;
-    *this = copied;
+	this->_type = copied._type;
+	this->_brain = new Brain(*(copied._brain));
     return;
 }
 
@@ -49,4 +51,9 @@ Dog::~Dog(void)
 void	Dog::makeSound(void) const
 {
 	std::cout << "Woof Woof" << std::endl;
+}
+
+Brain*	Dog::getBrain(void) const
+{
+	return this->_brain;
 }
