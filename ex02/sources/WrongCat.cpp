@@ -26,7 +26,7 @@ WrongCat::WrongCat(const std::string &type): WrongAnimal(type)
     return;
 }
 
-WrongCat::WrongCat(const WrongCat &copied)
+WrongCat::WrongCat(const WrongCat &copied): WrongAnimal(copied)
 {
     std::cout << "Copy constructor called from WrongCat" << std::endl;
     *this = copied;

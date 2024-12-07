@@ -45,6 +45,7 @@ Dog &Dog::operator=(const Dog &base)
 Dog::~Dog(void)
 {
     std::cout << "Destructor called from Dog" << std::endl;
+    delete _brain;
     return;
 }
 

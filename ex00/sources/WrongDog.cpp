@@ -26,7 +26,7 @@ WrongDog::WrongDog(const std::string &type): WrongAnimal(type)
     return;
 }
 
-WrongDog::WrongDog(const WrongDog &copied)
+WrongDog::WrongDog(const WrongDog &copied): WrongAnimal()
 {
     std::cout << "Copy constructor called from WrongDog" << std::endl;
     *this = copied;

@@ -29,10 +29,14 @@ int	main(void)
     Animal* animals[animalCount];
 
     // Half Dogs, Half Cats
-    for (int i = 0; i < animalCount / 2; ++i)
+    for (int i = 0; i < animalCount / 2; i++)
+    {
         animals[i] = new Dog();
-    for (int i = animalCount / 2; i < animalCount; ++i)
+    }
+    for (int i = animalCount / 2; i < animalCount; i++)
+    {
         animals[i] = new Cat();
+    }
 	for (int i = 0; i < animalCount; i++)
 		std::cout << "c'est qui ? : " << animals[i]->getType() << std::endl;
 

@@ -27,7 +27,7 @@ Cat::Cat(const std::string &type): Animal(type)
     return;
 }
 
-Cat::Cat(const Cat &copied)
+Cat::Cat(const Cat &copied): Animal(copied)
 {
     std::cout << "Copy constructor called from Cat" << std::endl;
     this->_type = copied._type;
@@ -45,6 +45,7 @@ Cat &Cat::operator=(const Cat &base)
 Cat::~Cat(void)
 {
     std::cout << "Destructor called from Cat" << std::endl;
+    delete _brain;
     return;
 }
 

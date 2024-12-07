@@ -16,7 +16,6 @@ Dog::Dog(void): Animal()
 {
     std::cout << "Default constructor called from Dog" << std::endl;
     _type = "Dog";
-	_brain = new Brain();
     return;
 }
 
@@ -26,10 +25,10 @@ Dog::Dog(const std::string &type): Animal(type)
     return;
 }
 
-Dog::Dog(const Dog &copied)
+Dog::Dog(const Dog &copied): Animal()
 {
     std::cout << "Copy constructor called from Dog" << std::endl;
-    *this = copied;
+    this->_type = copied._type;
     return;
 }
 

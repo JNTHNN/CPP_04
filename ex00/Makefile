@@ -13,7 +13,7 @@
 NAME 		:= Animal
 
 CPP 		:= c++
-CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD -pedantic
+CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD
 
 SRC_DIR		:=	sources/
 OBJ_DIR		:=	.obj/

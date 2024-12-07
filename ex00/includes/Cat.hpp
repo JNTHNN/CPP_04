@@ -17,7 +17,7 @@
 #include <iostream>
 #include <string>
 
-class Cat: public Animal
+class   Cat: public Animal
 {
     public:
         Cat();
