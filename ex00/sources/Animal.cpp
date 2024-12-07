@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/07 09:01:43 by jgasparo          #+#    #+#             */
+/*   Updated: 2024/12/07 09:17:10 by jgasparo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/Animal.hpp"
 
 Animal::Animal(void): _type("Animal")
@@ -32,4 +44,14 @@ Animal::~Animal(void)
 {
     std::cout << "Destructor called from Animal" << std::endl;
     return;
+}
+
+void	Animal::makeSound(void) const
+{
+	std::cout << "Bonjour" << std::endl;
+}
+
+const std::string	Animal::getType(void) const
+{
+	return this->_type;
 }

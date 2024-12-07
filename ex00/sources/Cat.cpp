@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/07 09:01:45 by jgasparo          #+#    #+#             */
+/*   Updated: 2024/12/07 09:18:28 by jgasparo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/Cat.hpp"
 
 Cat::Cat(void): Animal()
@@ -31,4 +43,9 @@ Cat::~Cat(void)
 {
     std::cout << "Destructor called from Cat" << std::endl;
     return;
+}
+
+void	Cat::makeSound(void) const
+{
+	std::cout << "Miaouuu" << std::endl;
 }

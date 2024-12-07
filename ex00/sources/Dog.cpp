@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/07 09:01:47 by jgasparo          #+#    #+#             */
+/*   Updated: 2024/12/07 09:17:17 by jgasparo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/Dog.hpp"
 
 Dog::Dog(void): Animal()
@@ -31,4 +43,9 @@ Dog::~Dog(void)
 {
     std::cout << "Destructor called from Dog" << std::endl;
     return;
+}
+
+void	Dog::makeSound(void) const
+{
+	std::cout << "Woof Woof" << std::endl;
 }

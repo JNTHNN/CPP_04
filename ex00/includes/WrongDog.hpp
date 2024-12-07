@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongDog.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/07 09:01:40 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/07 09:18:06 by jgasparo         ###   ########.fr       */
+/*   Created: 2024/12/07 09:19:52 by jgasparo          #+#    #+#             */
+/*   Updated: 2024/12/07 09:29:47 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef WRONGDOG_HPP
+# define WRONGDOG_HPP
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 #include <iostream>
 #include <string>
 
-class	Dog: public Animal
+class	WrongDog: public WrongAnimal
 {
 	public:
-		Dog();
-		Dog(const std::string &type);
-		Dog(const Dog &copied);
-		Dog &operator=(const Dog &base);
-		~Dog();
+		WrongDog();
+		WrongDog(const std::string &type);
+		WrongDog(const WrongDog &copied);
+		WrongDog &operator=(const WrongDog &base);
+		~WrongDog();
 
 		void	makeSound() const;
 };

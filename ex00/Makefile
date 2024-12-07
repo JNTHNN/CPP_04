@@ -1,15 +1,26 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/12/07 09:01:52 by jgasparo          #+#    #+#              #
+#    Updated: 2024/12/07 09:32:06 by jgasparo         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME 		:= Animal
 
 CPP 		:= c++
-CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD
+CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD -pedantic
 
 SRC_DIR		:=	sources/
 OBJ_DIR		:=	.obj/
 DEP_DIR		:=	.dep/
 INC_DIR		:=	includes/
 
-SRC_FILES	:= main.cpp Animal.cpp Cat.cpp Dog.cpp
-
+SRC_FILES	:= main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp WrongDog.cpp
 OBJ_FILES	:=	$(SRC_FILES:.cpp=.o)
 DEP_FILES	:=	$(OBJ_FILES:.o=.d)
 
