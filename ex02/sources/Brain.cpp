@@ -31,9 +31,11 @@ Brain::Brain(const Brain &copied)
 Brain &Brain::operator=(const Brain &base)
 {
     if (this != &base)
+    {
 		this->_nbIdeas = base._nbIdeas;
-	for (size_t i = 0; i < 100; i++)
-		this->_ideas[i] = base._ideas[i];
+	    for (size_t i = 0; i < 100; i++)
+		    this->_ideas[i] = base._ideas[i];
+    }
     return *this;
 }
 
