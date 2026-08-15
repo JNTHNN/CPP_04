@@ -38,7 +38,10 @@ Cat::Cat(const Cat &copied): AAnimal(copied)
 Cat &Cat::operator=(const Cat &base)
 {
     if (this != &base)
+    {
         this->_type = base._type;
+        *(this->_brain) = *(base._brain);
+    }
     return *this;
 }
 

@@ -38,7 +38,10 @@ Dog::Dog(const Dog &copied): Animal(copied)
 Dog &Dog::operator=(const Dog &base)
 {
     if (this != &base)
+    {
         this->_type = base._type;
+        *(this->_brain) = *(base._brain);
+    }
     return *this;
 }
 
